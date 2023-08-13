@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+
+<span th:text="${name}"/>
+
+<span th:each="p:${xxList}">
+    <span th:text="${p.xxx}"/>
+</span>
+
+<span th:each="o:${xxList}">
+  <span th:text="${o.xxx}"/>
+    <span th:each="t:${o.aaList}">
+        <span th:text="${t.aaa}"/>
+    </span>
+    <br/>
+</span>
+
+</body>
+</html>
